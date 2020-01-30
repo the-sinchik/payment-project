@@ -1,5 +1,6 @@
 <template>
     <div>
+        <card></card>
         <input type="text" v-model="text">
         <button @click="goTo()">
             Оплатить
@@ -8,8 +9,11 @@
 </template>
 
 <script>
+  import card from  '../components/CardComponent';
+
   export default {
     name: "Payment",
+    components: {card},
     data(){
       return {
         text: ''
